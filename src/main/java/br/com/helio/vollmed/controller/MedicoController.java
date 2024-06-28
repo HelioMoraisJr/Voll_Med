@@ -16,20 +16,23 @@ import java.util.List;
 public class MedicoController {
 
 	@Autowired
-	private MedicoRepository repository;
+	private MedicoRepository repository; // Injeta o repositório de Médicos
 	
 	@PostMapping
 	@Transactional
 	public void cadastrar(@RequestBody @Valid DadosCadastroMedico dados) {
+		// Cadastra um novo médico
 		repository.save(new Medico(dados));
 	}
 	@GetMapping
 	public Page<DadosListagemMedico> listar(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
+			// Lista todos os médicos ativos com paginação
 			return  repository.findAllByAtivoTrue(paginacao).map(DadosListagemMedico::new);
 		}
 	@PutMapping
 	@Transactional
 		public void atualizar(@RequestBody @Valid DadosAtualizacaoMedico dados){
+		// Atualiza informações de um médico existente
 			var medico = repository.getReferenceById(dados.id());
 			medico.atualizarInformacoes(dados);
 	}
@@ -43,6 +46,7 @@ public class MedicoController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public void excluir(@PathVariable Long id) {
+		// Marca um médico como inativo (exclusão lógica)
 		var medico = repository.getReferenceById(id);
 		medico.excluir();
 	}

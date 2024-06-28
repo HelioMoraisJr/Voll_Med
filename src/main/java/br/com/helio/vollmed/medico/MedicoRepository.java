@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 
 public interface MedicoRepository extends JpaRepository<Medico, Long> {
+    // Método para encontrar todos os médicos ativos com paginação
     Page<Medico> findAllByAtivoTrue(Pageable paginacao);
 }

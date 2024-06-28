@@ -6,11 +6,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "medicos")
-@Entity(name = "Medicos")
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "medicos") //especificar a tabela no banco de dados
+@Entity(name = "Medicos") //Esta anotação define que a classe é uma entidade JPA, ou seja, ela representa uma tabela no banco de dados
+@Getter //Esta anotação vem do projeto Lombok e é usada para gerar automaticamente métodos getters
+@NoArgsConstructor //Também do Lombok, esta anotação gera um construtor sem argumentos para a classe. É útil para frameworks que exigem um construtor padrão, como o JPA.
+@AllArgsConstructor //esta anotação do Lombok gera um construtor com um argumento para cada campo da classe. Isso é útil para criar rapidamente instâncias da classe com todos os campos preenchidos.
 
 public class Medico {
 
