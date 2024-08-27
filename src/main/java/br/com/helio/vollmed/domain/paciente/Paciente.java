@@ -1,8 +1,9 @@
-package br.com.helio.vollmed.paciente;
+package br.com.helio.vollmed.domain.paciente;
 
-import br.com.helio.vollmed.endereco.Endereco;
+import br.com.helio.vollmed.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class Paciente {
 
     @Id @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -19,11 +21,13 @@ public class Paciente {
     private String email;
     private String cpf;
     private  String telefone;
+    @Embedded
     private Endereco endereco;
 
     private  boolean ativo;
 
     public Paciente(DadosCadastroPaciente dadosPaciente) {
+        this.ativo = true;
         this.nome = dadosPaciente.nome();
         this.email = dadosPaciente.email();
         this.cpf = dadosPaciente.cpf();

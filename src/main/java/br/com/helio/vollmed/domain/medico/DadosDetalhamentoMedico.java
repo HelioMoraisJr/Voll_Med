@@ -1,6 +1,6 @@
-package br.com.helio.vollmed.medico;
+package br.com.helio.vollmed.domain.medico;
 
-import br.com.helio.vollmed.endereco.Endereco;
+import br.com.helio.vollmed.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm, String telefone, Especialidade especialidade, Endereco endereco) {
     public DadosDetalhamentoMedico (Medico medico){

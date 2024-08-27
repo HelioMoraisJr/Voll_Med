@@ -1,4 +1,4 @@
-package br.com.helio.vollmed.endereco;
+package br.com.helio.vollmed.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,7 @@
 package br.com.helio.vollmed.controller;
 
-import br.com.helio.vollmed.medico.*;
+import br.com.helio.vollmed.domain.medico.*;
+import br.com.helio.vollmed.domain.medico.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,8 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("medicos")
@@ -67,4 +66,5 @@ public class MedicoController {
 		var medico = repository.getReferenceById(id);
 		return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
 	}
+
 }

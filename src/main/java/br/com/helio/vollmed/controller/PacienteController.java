@@ -1,7 +1,7 @@
 package br.com.helio.vollmed.controller;
 
-import br.com.helio.vollmed.medico.DadosAtualizacaoMedico;
-import br.com.helio.vollmed.paciente.*;
+import br.com.helio.vollmed.domain.paciente.*;
+import br.com.helio.vollmed.domain.paciente.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

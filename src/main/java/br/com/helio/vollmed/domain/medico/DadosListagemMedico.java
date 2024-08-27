@@ -1,6 +1,4 @@
-package br.com.helio.vollmed.medico;
-
-import br.com.helio.vollmed.controller.MedicoController;
+package br.com.helio.vollmed.domain.medico;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade) {
 

@@ -1,6 +1,6 @@
-package br.com.helio.vollmed.paciente;
+package br.com.helio.vollmed.domain.paciente;
 
-import br.com.helio.vollmed.endereco.DadosEndereco;
+import br.com.helio.vollmed.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoPaciente(

@@ -1,6 +1,6 @@
-package br.com.helio.vollmed.medico;
+package br.com.helio.vollmed.domain.medico;
 
-import br.com.helio.vollmed.endereco.Endereco;
+import br.com.helio.vollmed.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

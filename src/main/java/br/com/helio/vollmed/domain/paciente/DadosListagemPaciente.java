@@ -1,6 +1,4 @@
-package br.com.helio.vollmed.paciente;
-
-import java.util.List;
+package br.com.helio.vollmed.domain.paciente;
 
 public record DadosListagemPaciente(String nome, String email, String cpf) {
 

@@ -1,4 +1,4 @@
-package br.com.helio.vollmed.medico;
+package br.com.helio.vollmed.domain.medico;
 
 public enum Especialidade {
 
